@@ -1,8 +1,44 @@
-@media (max-width: 700px)
-
-{
-.top-nav {
-    display: none;
-}
+@media (max-width: 700px) {
+    .top-nav {
+        display: none;
+    }
 
 }
+a {
+    text-decoration: none;
+}
+
+.top-nav a:link, .top-nav a:visited {
+    color: #938992;
+}
+
+.top-nav a:hover, .top-nav a:focus{
+    color: #f68686;
+}
+.top-nav a:active {
+    color: #f14d4d;
+    font-weight: bold;
+}
+.inside-menu:link, .inside-menu:visited{
+    color:#7B7A7A
+}
+
+#menu .inside-menu:hover, #menu .inside-menu:focus, #menu .inside-menu:active{
+    color: white;
+    background-color:#F25A5A;
+}
+
+.red-button {
+    color: white;
+    background-color: #F14848;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0,0,0,.15);
+}
+
+.white-button {
+    color: #F36363;
+    background-color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0,0,0,.15);
+}
+
