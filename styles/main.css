@@ -233,17 +233,22 @@ input.checked[type="radio"] {
     font-weight: 300;
 }
 
-.blog h3, .blog p{
-
+.blog ul{
+    height: 500px;
 }
 
 .blog li{
     display: inline-block;
-    height: 400px;
     width: 16%;
     overflow: hidden;
     flex-grow: 1;
     text-align: start;
+    position: relative;
+}
+
+.blog li div{
+    position: absolute;
+    bottom: 0;
 }
 
 .blog a{
