@@ -242,9 +242,6 @@ input.checked[type="radio"] {
     height: 100%;
     float: left;
     width: 16.66666667%;
-    overflow: hidden;
-    flex-grow: 1;
-    text-align: start;
     position: relative;
 }
 
