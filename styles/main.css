@@ -3,6 +3,12 @@ main, header, footer, figcaption, section, div, ul, li, h2, h3, p, a {
     margin: 0;
     font-size: 100%;
     font-family: 'Source Sans Pro', sans-serif;
+    list-style: none;
+}
+
+html,
+body {
+    font: 100% 'Source Sans Pro', sans-serif;
 }
 
 header *{
@@ -35,20 +41,25 @@ h1, h2, h3, p {
 }
 
 h1{
-    font-size: 1.8rem;
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 0;
 }
 
 h2{
-    font-size: 4rem;
+    font-size: 6rem;
+    font-weight: 300;
+    line-height: 0.8;
+    margin-bottom: 3%;
 }
 
 h3{
     font-size: 3rem;
+    font-weight: 300;
 }
 
 a{
     text-decoration: none;
-    font-size: 1.2rem;
 }
 
 p{
@@ -101,7 +112,7 @@ a:hover, a:focus{
     color: #fff;
     background-color: #F14848;
     border-radius: 10px;
-    padding 10px 10px;
+    padding: 10px 10px;
     margin: 5px 5px;
     line-height: 30px;
     width: 15%;
@@ -135,6 +146,72 @@ a:hover, a:focus{
 
 .figure-section ul li>h4{
     color: white;
+    font-weight: 300;
+}
+
+.figure-section .left , .figure-section .middle, .figure-section .right {
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.figure-section .middle {
+    padding-left: 2%;
+    width: 20%;
+}
+
+.figure-section .left{
+    text-align: left;
+    width: 20%;
+    padding: 0 2%;
+}
+
+.figure-section .left h3{
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 10%;
+    text-transform: uppercase;
+}
+
+.figure-section .left p{
+    padding: 10%;
+    padding-top: 0;
+}
+
+.figure-section .right {
+    width: 30%;
+}
+
+/*[type="radio"] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px; margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}*/
+
+input.checked[type="radio"] {
+    visibility:hidden;
+}
+
+.split div {
+    display: inline-block;
+    width: 50%;
+}
+
+.split .white-side {
+    width: 49%;
+}
+
+.split .red-side, .split .red-side h3, .split .red-side p{
+    background-color: #F14848;
+    height: 100%;
+    color: white;
+
+}
+.split .red-side h3, .split .red-side p{
+    padding: 10%;
 }
 
 .download {
@@ -148,6 +225,7 @@ a:hover, a:focus{
     padding: 0;
     width: 100%;
     height: 400px;
+    background-color: black;
 }
 
 .blog h3, .blog p, .blog a {
@@ -165,6 +243,7 @@ a:hover, a:focus{
     width: 16%;
     overflow: hidden;
     flex-grow: 1;
+    text-align: start;
 }
 
 .blog a{
@@ -176,7 +255,7 @@ a:hover, a:focus{
     display: block;
     background-color: #F14848;
     height: 20%;
-    width: 100%
+    width: 100%;
     text-align: center;
     align-content: center;
     bottom: 0;
@@ -189,8 +268,11 @@ a:hover, a:focus{
 .blog li:nth-child(2){
    background-color: rgba(0,0,0,0.6);
     background: url("../assets/blog/ibc_post_EI-750x508.png") no-repeat center ;
+    opacity: .5;
+}
 
-
+.blog li:nth-child(2)::selection, .blog li:nth-child(2):hover {
+    opacity: 1;
 }
 
 .blog li:nth-child(3){
@@ -227,15 +309,58 @@ a:hover, a:focus{
 .site-footer {
     background-color: #1E2024;
     color: white;
+    height: 100%;
+}
+
+.sub-footer{
+    margin: auto;
     height: 200px;
+    width: 90%;
+    display: block;
+    max-width: 1230px;
+
 }
 .footer{
     background-color: #151515;
-    justify-content: center;
+    height: 50px;
+    line-height: 50px;
     width: 100%;
     bottom: 0;
 }
-.footer a{
+
+.footer-design{
+    font-weight: 100;
+    height: 30px;
+    line-height: 30px;
+    font-size: 2px;
+    width: 90%;
+    display: block;
+    margin: auto;
+    max-width: 1230px;
+    overflow: hidden;
+}
+
+.footer-design div>p{
+    padding-right: 1.5%;
+    border-right: white 1px solid;
+}
+
+.footer-design div>a{
+    padding-right: 1.5%;
+    padding-left: 1.5%;
+    border-right: white 1px solid;
+}
+
+.footer-design div>a:last-child{
+    border: none;
+}
+
+.footer-design>p{
+    padding-left: 3%;
+    padding-right: 5%;
+}
+
+.site-footer .footer a{
     color: white;
     font-weight: 100;
 }
@@ -249,6 +374,22 @@ a:hover, a:focus{
 @media (max-width: 700px) {
     .top-nav {
         display: none;
+    }
+}
+@media (max-width: 1126px){
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 1200px){
+    .sub-footer, .footer-design{
+        max-width: 880px;
+    }
+}
+@media (max-width: 990px){
+    .sub-footer, .footer-design{
+        max-width: 660px;
     }
 }
 
