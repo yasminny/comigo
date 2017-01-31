@@ -47,15 +47,17 @@ h1, h2, h3, p {
 }
 
 h1{
-    font-size: 3.5rem;
-    font-weight: 300;
+    font-size: 2.5vw;
+    font-weight: 500;
     margin-bottom: 0;
+    padding-top: 3%;
 }
 
 h2{
-    font-size: 6rem;
-    font-weight: 300;
+    font-size: 8vh;
+    font-weight: 500;
     line-height: 0.8;
+    padding-top: 0.5%;
     margin-bottom: 3%;
 }
 
@@ -148,11 +150,11 @@ a:hover, a:focus{
 
 .main{
     background-image: url("../assets/other/homepage-featured-new-1920x745.jpg");
-    background-size: 100%;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 100vh;
     text-align: center;
-    margin-top: 4%;
+    margin-top: 66px;
+    background-size: 100%;
 }
 
 .main h1, .main h2{
@@ -160,12 +162,12 @@ a:hover, a:focus{
 }
 
 .main .red-button{
-    padding: 0 10px;
+    padding: 0.25% 2%;
 
 }
 
 .why{
-    height: 500px;
+    height: 300px;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -272,7 +274,7 @@ input.checked[type="radio"] {
 }
 
 .split .red-side, .split .white-side {
-    
+
     width: 50%;
     float: left;
     height: 100%;
@@ -464,11 +466,11 @@ input.checked[type="radio"] {
         display: none;
     }
 }
-@media (max-width: 1126px){
+/*@media (max-width: 1126px){
     h1 {
         font-size: 2.5rem;
     }
-}
+}*/
 
 @media (max-width: 1200px){
     .sub-footer, .footer-design{
