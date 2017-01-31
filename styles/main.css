@@ -151,7 +151,8 @@ a:hover, a:focus{
 .main{
     background-image: url("../assets/other/homepage-featured-new-1920x745.jpg");
     background-repeat: no-repeat;
-    height: 100vh;
+    height: 50vh;
+    width: 100vw;
     text-align: center;
     margin-top: 66px;
     background-size: 100%;
