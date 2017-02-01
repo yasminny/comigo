@@ -17,34 +17,54 @@
     <a href="#" class="upper-logo"><img src="assets/logo/comigo-logo-black.png" alt="comigo logo"></a>
     <nav class="top-nav">
       <ul>
-        <li><a href="#" class="layer-one">home</a></li>
+        <li><a href="#" class="layer-one" id="selected">home</a></li>
         <li>
           <a href="#" class="layer-one">our solutions</a>
           <ul>
             <li>
-              <a href="#" class="inside-menu">ei cloud</a>
+              <a href="#" class="inside-menu">
+                <span>ei cloud</span>
+              </a>
               <ul>
-                <li><a href="#" class="inside-menu">ei<span>x</span></a></li>
-                <li><a href="#" class="inside-menu">ei mind</a></li>
+                <li><a href="#" class="inside-menu">
+                  <span>EIx</span>
+                </a></li>
+                <li><a href="#" class="inside-menu">
+                  <span>ei mind</span>
+                </a></li>
               </ul>
             </li>
             <li>
-              <a href="#" class="inside-menu">ei middleware</a>
+              <a href="#" class="inside-menu">
+                <span>ei middleware</span>
+              </a>
               <ul>
-                <li><a href="#" class="inside-menu">android</a></li>
-                <li><a href="#" class="inside-menu">comigo whatchapp<span>tm</span> APPLICATIONS</a></li>
+                <li><a href="#" class="inside-menu">
+                  <span>android</span>
+                </a></li>
+                <li><a href="#" class="inside-menu">
+                  <span>comigo whatchapptm APPLICATIONS</span>
+                </a></li>
               </ul>
             </li>
-            <li><a href="#" class="inside-menu">android stb</a></li>
+            <li><a href="#" class="inside-menu">
+              <span>android stb</span>
+            </a></li>
           </ul>
         </li>
         <li><a href="#" class="layer-one">partners</a></li>
         <li>
           <a href="#" class="layer-one">industry insights</a>
           <ul>
-            <li><a href="#" class="inside-menu">media room</a></li>
-            <li><a href="#" class="inside-menu">blog</a></li>
-            <li><a href="#" class="inside-menu">industry events</a></li>
+            <li><a href="#" class="inside-menu">
+              <span>media room</span>
+            </a></li>
+            <li><a href="#" class="inside-menu">
+              <span>blog</span>
+            </a></li>
+            <li><a href="#" class="inside-menu">
+              <span>industry events</span>
+            </a></li>
           </ul>
         </li>
         <li><a href="#" class="layer-one">About</a></li>
@@ -80,38 +100,6 @@
             <label for="pedia">
               <input type="radio" checked="checked" value="pedia" name="fig" id="pedia">pedia
             </label>
-          </li>
-          <li>
-            <label for="participation">
-              <input type="radio" checked="checked" value="participation" name="fig" id="participation">participation
-            </label>
-          </li>
-          <li>
-            <label for="discovery">
-              <input type="radio" checked="checked" value="discovery" name="fig" id="discovery">discovery
-            </label>
-          </li>
-          <li>
-            <label for="commerce">
-              <input type="radio" checked="checked" value="commerce" name="fig" id="commerce">commerce
-            </label>
-          </li>
-          <li>
-            <label for="advertising">
-              <input type="radio" checked="checked" value="blackcar" name="fig" id="advertising">advertising
-            </label>
-          </li>
-          <li>
-            <label for="customize">
-              <input type="radio" checked="checked" value="customize" name="fig" id="customize">customize
-            </label>
-          </li>
-        </ul>
-      </div>
-
-      <div class="right">
-        <ul>
-          <li>
             <figure>
               <figcaption>drive stickiness by enriching content with<br>contextual data from external sources
               </figcaption>
@@ -119,12 +107,18 @@
             </figure>
           </li>
           <li>
+            <label for="participation">
+              <input type="radio" checked="checked" value="participation" name="fig" id="participation">participation
+            </label>
             <figure>
               <figcaption>engage viewers and increase content spread<br>through data-driven social features</figcaption>
               <img src="assets/services/participation.png">
             </figure>
           </li>
           <li>
+            <label for="discovery">
+              <input type="radio" checked="checked" value="discovery" name="fig" id="discovery">discovery
+            </label>
             <figure>
               <figcaption>offer personalised content with contextualised<br>search, menu and recommendations
               </figcaption>
@@ -132,18 +126,27 @@
             </figure>
           </li>
           <li>
+            <label for="commerce">
+              <input type="radio" checked="checked" value="commerce" name="fig" id="commerce">commerce
+            </label>
             <figure>
               <figcaption>create new revenue engines through<br>contextual shopping services</figcaption>
               <img src="assets/services/commerce.png">
             </figure>
           </li>
           <li>
+            <label for="advertising">
+              <input type="radio" checked="checked" value="blackcar" name="fig" id="advertising">advertising
+            </label>
             <figure>
               <figcaption>offer ultra-targeted measurable advertising with<br> advanced campaign analytic</figcaption>
               <img src="assets/services/blackcar.png">
             </figure>
           </li>
           <li>
+            <label for="customize">
+              <input type="radio" checked="checked" value="customize" name="fig" id="customize">customize
+            </label>
             <figure>
               <figcaption>quickly launch new, unique services<br>based on our open SDK</figcaption>
               <img src="assets/services/customize.png">
@@ -151,6 +154,8 @@
           </li>
         </ul>
       </div>
+
+      <div class="right"> </div>
     </section>
 
     <section class="split">
@@ -171,27 +176,35 @@
 
     </section>
 
-    <section>
-      <h3>your content, comigo's unique experience</h3>
-      <p>intelligence-based contextual<br>watchapp<span>tm</span> applications.</p>
-      <a href="#" class="red-button">learn more</a>
-      <img src="#">
+    <section class="tv">
+      <div>
+        <h3>your content, comigo's unique experience</h3>
+        <p>intelligence-based contextual<br>watchapp<span>tm</span> applications.</p>
+        <a href="#" class="red-button">learn more</a>
+      </div>
+      <img src="assets/other/screen_whos_on.jpg">
     </section>
 
-    <section>
-      <h3>learn more about comigo</h3>
-      <a href="#" class="download">download our
-        brochure to learn more</a>
-      <div>
-        <ul>
-          <li><a href="#">facebook link</a></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+    <section class="floats">
+      <div class="sixty">
+        <div class="line-one">
+          <h3>learn more about comigo</h3>
+          <a href="#" class="download">Download our
+            brochure to learn more</a>
+        </div>
+        <div class="line-two">
+          <ul>
+            <li><a href="#">facebook link</a></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <a href="#">schedule a meeting at ibc 2016</a>
+        </div>
       </div>
-      <a href="#">schedule a meeting at ibc 2016</a>
-      <a href="#">schedule a demo</a>
+      <div class="forty">
+        <a href="#">schedule a demo</a>
+      </div>
     </section>
 
     <section class="blog">
