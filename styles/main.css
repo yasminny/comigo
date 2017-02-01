@@ -18,24 +18,19 @@ html {
     box-sizing: inherit;
 }
 
+body{
+    padding-top: 66px;
+}
 
 header {
     position: fixed;
-    z-index: 9999;
     background-color: white;
     top: 0;
+    left: 0;
     width: 100%;
     height: 66px;
     line-height: 66px;
-    overflow: hidden;
-}
-
-header nav{
-    float: right;
-}
-
-.inside-menu{
-    display: none;
+    box-shadow: 0 7px 7px rgba(0,0,0,.05);
 }
 
 h1, h2, h3, p {
@@ -46,7 +41,6 @@ h1{
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 0;
-    padding-top: 10%;
 }
 
 h2{
@@ -77,6 +71,19 @@ a:hover, a:focus{
     color: #f14848;
 }
 
+header nav {
+    float: right;
+}
+
+.top-nav ul li ul{
+    display: none;
+}
+
+.top-nav ul li:hover > ul{
+    display: inline-block;
+    height: 148px;
+}
+
 .top-nav ul, .top-nav{
     display: inline-block;
     float: right;
@@ -90,13 +97,60 @@ a:hover, a:focus{
     font-weight: bold;
 }
 
+.top-nav ul ul{
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.top-nav ul ul ul{
+    position: absolute;
+    top: 148px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+}
+
+.top-nav ul ul li{
+    width: 33.333333%;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    height: 148px;
+    line-height: 148px;
+}
+
+.top-nav ul ul ul li{
+    width: 50%;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    height: 148px;
+    line-height: 148px;
+    word-spacing: 0%;
+}
+
 .inside-menu:link, .inside-menu:visited, .figure-section h4{
-    color:#7B7A7A
+    color:#7B7A7A;
+    height: 100%;
+    width: 100%;
+    line-height: 148px;
+    font-weight: 300;
+    display: inline-block;
 }
 
 .inside-menu:hover, .inside-menu:focus, .inside-menu:active {
     color: white;
     background-color:#f14848;
+    height: 100%;
+    width: 100%;
+    line-height: 148px;
+    font-weight: 300;
+    display: inline-block;
 }
 
 .upper-logo{
@@ -137,6 +191,11 @@ a:hover, a:focus{
 .split .white-button{
     color: #F14848;
     background-color: white;
+    border-radius: 20px;
+    padding: 5px 5px;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    font-size: 0.75rem;
 }
 
 .white-button:hover, .red-button:hover {
@@ -147,10 +206,10 @@ a:hover, a:focus{
 .main{
     background-image: url("../assets/other/homepage-featured-new-1920x745.jpg");
     background-repeat: no-repeat;
-    height: 38vw;
+    height: 38.322vw;
     text-align: center;
-    margin-top: 66px;
-    background-size: 100%;
+    background-size: cover;
+    padding-top: 10%;
 }
 
 .main h1, .main h2{
@@ -268,37 +327,83 @@ input.checked[type="radio"] {
 .split{
     display: inline-block;
     width: 100%;
-    height: 600px;
+    height: 41vw;
 }
 
 .split .red-side, .split .white-side {
-
     width: 50%;
     float: left;
     height: 100%;
 }
 
-.split .white-side {
-    background: url("../assets/other/home-tv-service-bg2.png") no-repeat;
+.red-side-img{
+    display: inline-block;
+    width: 45%;
+    margin-left: 15%;
+    margin-top: 50%;
 }
 
-.red-side-img{
-    border: 1px blue solid;
-    background-image: url("../assets/other/ic_EI_cloud_2_home_page.png");
-    background-repeat: no-repeat;
+.red-side-img h3{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.red-side-img p{
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding-bottom: 5%;
+}
+
+.red-side-img .white-button{
+    display: inline-block;
+    padding: 2% 7%;
+    text-transform: uppercase;
 }
 
 .split .red-side{
-    background: url("../assets/other/home-tv-service-bg1.png");
+    background: url("../assets/other/ic_EI_cloud_2_home_page.png"), url("../assets/other/home-tv-service-bg1.png");
+    background-repeat: no-repeat;
+    background-size: 50%, cover;
+    background-position: 30% 20% ,center;
+    height: 41vw;
+
 }
 
 .split .red-side h3, .split .red-side p{
     color: white;
-
 }
 
-.split .red-side h3, .split .red-side p{
-    padding: 10%;
+.split .white-side {
+    background-image: url("../assets/other/ic-stb-screens.png"), url("../assets/other/home-tv-service-bg2.png");
+    background-repeat: no-repeat;
+    background-size: 40%, cover;
+    background-position: 15% 15% ,center;
+    height: 41vw;
+}
+
+.white-side-img{
+    display: inline-block;
+    width: 80%;
+    margin-left: 8%;
+    margin-top: 50%;
+}
+
+.white-side-img h3{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.white-side-img p{
+    font-size: 1rem;
+    text-transform: capitalize;
+    padding-bottom: 2%;
+}
+
+.white-side-img .red-button{
+    display: inline-block;
+    padding: 2% 5%;
+    text-transform: uppercase;
+    margin: 0;
 }
 
 .download {
@@ -325,7 +430,7 @@ input.checked[type="radio"] {
 }
 
 .blog li:nth-child(1){
-    background-color: #F14848 ;
+    background-color: #F14848;
 }
 
 .blog li:nth-child(2){
@@ -355,13 +460,18 @@ input.checked[type="radio"] {
 
 .blog li{
     display: inline-block;
-    height: 100%;
+    height: 400px;
     float: left;
     width: 16.66666667%;
     position: relative;
 }
 
 .blog li div{
+    height: 100%;
+    border: blue 1px solid;
+}
+
+.blog .blog-text p{
     position: absolute;
     bottom: 0;
     opacity: 1;
@@ -377,6 +487,22 @@ input.checked[type="radio"] {
     padding: 10px;
     bottom: 0;
     opacity: 1;
+}
+
+.blog .our-blog{
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin: 0 auto;
+    bottom: 0;
+}
+
+.blog-text-first h3{
+    font-size: 3.7rem;
+    text-transform: uppercase;
+}
+
+.blog-text-first p{
+    text-transform: uppercase;
 }
 
 .sub-footer .bottom-menu a{
