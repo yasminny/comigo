@@ -24,6 +24,7 @@ body{
 
 header {
     position: fixed;
+    z-index: 10;
     background-color: white;
     top: 0;
     left: 0;
@@ -217,7 +218,7 @@ header nav {
 .main{
     background-image: url("../assets/other/homepage-featured-new-1920x745.jpg");
     background-repeat: no-repeat;
-    height: 38.322vw;
+    height: 38.8vw;
     text-align: center;
     background-size: cover;
     padding-top: 10%;
@@ -233,7 +234,7 @@ header nav {
 }
 
 .why{
-    height: 28.8vw;
+    height: 28.99vw;
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -267,8 +268,8 @@ header nav {
 }
 
 .figure-section{
-    height: 474px;
-    line-height: 474px;
+    height: 39.99vw;
+    line-height: 39.99vw;
 }
 
 .figure-section p{
@@ -365,7 +366,7 @@ input.checked[type="radio"] {
 .split{
     display: inline-block;
     width: 100%;
-    height: 41vw;
+    height: 42vw;
 }
 
 .split .red-side, .split .white-side {
@@ -446,8 +447,8 @@ input.checked[type="radio"] {
 
 .tv {
     width:100%;
-    height: 580px;
-    line-height: 580px;
+    height: 48.99vw;
+    line-height: 48.99vw;
 }
 
 .tv div{
@@ -467,7 +468,7 @@ input.checked[type="radio"] {
 
 .floats{
     width: 100%;
-    height: 486px;
+    height: 40.99vw;
     position: relative;
     display: block;
 }
@@ -508,7 +509,7 @@ input.checked[type="radio"] {
 }
 
 .line-one h3{
-    width: 65%;
+    width: 66.6666%;
     height: 100%;
     float: left;
     text-transform: uppercase;
@@ -519,7 +520,7 @@ input.checked[type="radio"] {
 }
 
 .line-one a {
-    width: 35%;
+    width: 33.33333%;
     height: 100%;
     float: left;
     color: white;
@@ -536,13 +537,13 @@ input.checked[type="radio"] {
 
 .line-two ul{
     height: 100%;
-    width: 30%;
+    width: 33.33333%;
     float: left;
     background-color: #efefef;
 }
 .line-two .line-two-right{
     height: 100%;
-    width: 70%;
+    width: 66.666666%;
     padding-top: 3%;
     padding-left: 3%;
     text-transform: uppercase;
@@ -567,8 +568,10 @@ input.checked[type="radio"] {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 35.5vw;
+    height: 35.99vw;
     background-color: black;
+    position: relative;
+    overflow: hidden;
 }
 
 .blog h3, .blog p, .blog a {
@@ -577,7 +580,8 @@ input.checked[type="radio"] {
 }
 
 .blog ul{
-    height: 35.5vw;
+    height: 100%;
+    overflow: hidden;
 }
 
 .blog li:nth-child(1){
@@ -615,24 +619,26 @@ input.checked[type="radio"] {
 
 .blog li{
     display: inline-block;
-    height: 35.5vw;
+    height: 100%;
     float: left;
     width: 16.66666667%;
-    position: relative;
     overflow: hidden;
 }
 
-.blog li div{
+.blog .bg{
     height: 100%;
 }
 
-.blog li a{
-    height: 100%;
-    display: inline-block;
-}
-
-.blog .blog-text p{
+.blog li>a{
     position: absolute;
+    height: 100%;
+    width: 100%;
+    bottom: 0;
+}
+
+.blog .blog-text{
+    position: absolute;
+    width: 16.66666667%;
     bottom: 0;
 }
 
@@ -645,18 +651,25 @@ input.checked[type="radio"] {
     text-align: center;
     margin: 2%;
     position: absolute;
-    top: 100%
+    top: 100%;
 }
 
 .blog li:hover .read{
-    bottom: 0;
+    position: relative;
+    top: auto;
     margin: 0;
-
 }
 
-.blog .read{
-    transition-property: top;
-    transition-duration: 0.2s;
+.blog li:hover .blog-text{
+    position: absolute;
+    bottom: 0;
+}
+
+.blog-text{
+    transition-property: all;
+    transition-duration: 13s;
+    transition-timing-function: ease-in;
+    transition-delay: initial;
 }
 
 .blog-text-first{
@@ -671,8 +684,14 @@ input.checked[type="radio"] {
     font-size: 3.7rem;
 }
 
-.sub-footer .bottom-menu a{
+.sub-footer a{
     color: white;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.sub-footer li>ul>li a{
+    color: #7a7a7a;
 }
 
 .sub-footer a:hover, .sub-footer a:focus, .figure-section h4:hover, .figure-section h4:focus {
@@ -682,28 +701,52 @@ input.checked[type="radio"] {
     color:white;
 }
 
-.site-footer *{
-    display: inline-block;
-}
-
 .site-footer {
     background-color: #1E2024;
     color: white;
-    height: 100%;
+    height: 25.31vw;
 }
 
 .sub-footer{
-    margin: auto;
-    height: 200px;
-    width: 90%;
+    height: 21.19vw;
+    width: 100%;
+    display: inline-block;
+    padding: 0 10%;
+    position: relative;
+}
+
+.sub-footer ul{
+    float: left;
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    border: yellow 1px solid;
+}
+
+.sub-footer li{
+    border: red 1px solid;
     display: block;
-    max-width: 1230px;
+    padding: 1% 0;
+}
+
+.sub-footer ul> li> ul{
+    width: 100%;
+}
+
+.sub-footer .bottom-menu-1 .bottom-menu-main{
 
 }
+
+.sub-footer>a{
+    position: absolute;
+    right: 11%;
+    bottom: 20%;
+}
+
 .footer{
     background-color: #151515;
-    height: 50px;
-    line-height: 50px;
+    height: 3.89vw;
+    line-height: 3.89vw;
     width: 100%;
     bottom: 0;
 }
@@ -760,7 +803,7 @@ input.checked[type="radio"] {
     h1 {
         font-size: 2.5rem;
     }
-}*/
+}
 
 @media (max-width: 1200px){
     .sub-footer, .footer-design{
@@ -771,5 +814,23 @@ input.checked[type="radio"] {
     .sub-footer, .footer-design{
         max-width: 660px;
     }
+}*/
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
 }
 
+.clearfix:after {
+    clear: both;
+}
