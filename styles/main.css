@@ -286,18 +286,19 @@ header nav {
     font-weight: 300;
     display: block;
     padding-bottom: 10px;
-    position: relative;
 }
 
 .middle figure{
     display: none;
+    position: absolute;
+
 }
 
 .figure-section label:hover, .figure-section label::selection{
     color: #f14848;
 }
 
-.figure-section .middle label:checked > figure {
+/*.figure-section .middle label:checked > figure {
     display: inline-block;
     position: absolute;
     top:0;
@@ -309,7 +310,7 @@ header nav {
     position: absolute;
     top:0;
     left: 0;
-}
+}*/
 
 .figure-section .left , .figure-section .middle, .figure-section .right {
     display: inline-block;
@@ -318,7 +319,8 @@ header nav {
 
 .figure-section .middle {
     padding-left: 2%;
-    width: 20%;
+    width: 50%;
+    position: relative;
 }
 
 .figure-section .left{
@@ -339,10 +341,6 @@ header nav {
     padding-top: 0;
 }
 
-.figure-section .right {
-    width: 30%;
-}
-
 /*[type="radio"] {
     border: 0;
     clip: rect(0 0 0 0);
@@ -356,6 +354,13 @@ header nav {
 input.checked[type="radio"] {
     visibility:hidden;
 }*/
+
+.figure-section label:hover + figure{
+    position: absolute;
+    display: inline-block;
+    right: -342px;
+    bottom: -150px;
+}
 
 .split{
     display: inline-block;
@@ -579,29 +584,33 @@ input.checked[type="radio"] {
     background-color: #F14848;
 }
 
-.blog li:nth-child(2){
+.blog li:nth-child(2) .bg{
     background: url("../assets/blog/ibc_post_EI-750x508.png") no-repeat center ;
     opacity: .5;
 }
 
-.blog li:nth-child(2)::selection, .blog li:nth-child(2):hover {
-    opacity: 1;
-}
-
-.blog li:nth-child(3){
+.blog li:nth-child(3) .bg{
     background: url("../assets/blog/IMG_9294-750x563.jpeg") no-repeat center ;
+    opacity: .5;
 }
 
-.blog li:nth-child(4){
+.blog li:nth-child(4) .bg{
     background: url("../assets/blog/Image-Blog-Yoav_356121362-copy-750x563.jpg") no-repeat center ;
+    opacity: .5;
 }
 
-.blog li:nth-child(5){
+.blog li:nth-child(5) .bg{
     background: url("../assets/blog/post_tv_connect-750x508.jpeg") no-repeat center ;
+    opacity: .5;
 }
 
-.blog li:nth-child(6){
+.blog li:nth-child(6) .bg{
     background: url("../assets/blog/post_quality-750x508.jpeg") no-repeat center ;
+    opacity: .5;
+}
+
+.blog li:active .bg, .blog li:hover .bg{
+    opacity: 1;
 }
 
 .blog li{
@@ -610,16 +619,21 @@ input.checked[type="radio"] {
     float: left;
     width: 16.66666667%;
     position: relative;
+    overflow: hidden;
 }
 
 .blog li div{
     height: 100%;
 }
 
+.blog li a{
+    height: 100%;
+    display: inline-block;
+}
+
 .blog .blog-text p{
     position: absolute;
     bottom: 0;
-    opacity: 1;
 }
 
 .blog .read{
@@ -629,9 +643,20 @@ input.checked[type="radio"] {
     line-height: 40px;
     width: 100%;
     text-align: center;
-    padding: 10px;
+    margin: 2%;
+    position: absolute;
+    top: 100%
+}
+
+.blog li:hover .read{
     bottom: 0;
-    opacity: 1;
+    margin: 0;
+
+}
+
+.blog .read{
+    transition-property: top;
+    transition-duration: 0.2s;
 }
 
 .blog-text-first{
