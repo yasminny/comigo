@@ -24,8 +24,6 @@ body {
   padding-top: 66px;
 }
 
-
-
 h1, h2, h3, p {
   color: #3d3d3d;
 }
@@ -63,6 +61,10 @@ a:link, a:visited {
 
 a:hover, a:focus {
   color: #f14848;
+}
+
+.button{
+
 }
 
 .red-button:link,
@@ -750,7 +752,7 @@ input[type=radio]:checked + label .checked {
   border: none;
 }
 
-@media (min-width: 701px){
+@media (min-width: 701px) {
   header {
     position: fixed;
     z-index: 100;
@@ -765,9 +767,9 @@ input[type=radio]:checked + label .checked {
     clear: both;
   }
 
-  .header{
+  .header {
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     display: none;
   }
@@ -910,7 +912,7 @@ input[type=radio]:checked + label .checked {
 
 @media (max-width: 700px) {
 
-  header{
+  header {
     position: fixed;
     z-index: 100;
     background-color: white;
@@ -936,7 +938,8 @@ input[type=radio]:checked + label .checked {
     vertical-align: middle;
     padding-left: 10px;
   }
-  .menu-link{
+
+  .menu-link {
     float: right;
     position: absolute;
     top: 0;
@@ -949,36 +952,36 @@ input[type=radio]:checked + label .checked {
     text-align: center;
   }
 
-  .top-nav{
+  .top-nav {
     display: none;
     width: 100%;
   }
 
-  .top-nav a{
+  .top-nav a {
     font-size: 25px;
     text-transform: capitalize;
     font-weight: 300;
     width: 100%;
   }
 
-  .top-nav > ul{
+  .top-nav > ul {
     width: 100%;
     height: calc(100vh - 66px);
     display: block;
     overflow: scroll;
   }
 
-  .top-nav li{
+  .top-nav li {
     padding: 5px 0 5px 30px;
   }
 
-  .top-nav li:before{
+  .top-nav li:before {
     content: "-      ";
     font-size: 30px;
     font-weight: 200;
   }
 
-  .top-nav .layer-one:before{
+  .top-nav .layer-one:before {
     content: "";
     width: 33px;
     height: 25px;
@@ -987,15 +990,15 @@ input[type=radio]:checked + label .checked {
     background-color: white;
   }
 
-  .top-nav ul ul{
+  .top-nav ul ul {
     padding-left: 33px;
   }
 
-  input[type="checkbox"]:checked + .top-nav{
+  input[type="checkbox"]:checked + .top-nav {
     display: block;
   }
 
-  .main{
+  .main {
     width: 100%;
     height: 62vw;
     background-size: cover;
@@ -1003,34 +1006,111 @@ input[type=radio]:checked + label .checked {
     padding-top: 5%;
   }
 
-  .main h1{
+  .main h1 {
     margin-top: 0;
     padding: 2%;
   }
 
-  .main h2{
+  .main h2 {
     display: block;
     margin: 0 auto;
     width: 60%;
     line-height: 1.2;
   }
 
-  .main .red-button{
+  .main .red-button {
     margin-top: 5%;
     transform: scale(1.5);
   }
 
-  .why{
+  .why {
     width: 100%;
     height: 44.71vw;
   }
 
-  .why .red-button{
+  .why .red-button {
     transform: scale(1.5);
     margin-top: 5%;
   }
 
+  .figure-section {
+    width: 100%;
+    height: 170vw;
   }
+
+  .figure-section .left {
+    width: 100%;
+  }
+
+  .figure-section .left h3 {
+    font-size: 2.5rem;
+    padding: 7% 5%;
+
+  }
+
+  .figure-section .left p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-left: 5%;
+    padding-bottom: 0;
+  }
+
+  .figure-section .middle {
+    padding-left: 7%;
+    padding-bottom: 3%;
+    width: 100%;
+  }
+
+  .figure-section label {
+    text-transform: uppercase;
+    padding: 2% 0;
+  }
+
+  .figure-section figcaption {
+    display: inline-block;
+    width: 70%;
+    font-weight: 300;
+    padding-bottom: 5%;
+  }
+
+  input[type=radio]:checked + figure {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+
+  .split {
+    height: 185vw;
+  }
+
+  .split .red-side {
+    width: 100%;
+    height: 92.5vw;
+    background-size: 65%, cover;
+    background-position: 30% 10%, center;
+  }
+
+  .split .white-side {
+    width: 100%;
+    height: 92.5vw;
+    background-size: 50%, cover;
+    background-position: 25% 15%, center;
+  }
+
+  .split .red-side-img {
+    transform: scale(1.2);
+    margin-top: 57%;
+  }
+
+  .split .white-side-img{
+    transform: scale(1.2);
+    margin-top: 57%;
+  }
+
+}
 
 /**
  * For modern browsers
