@@ -63,10 +63,6 @@ a:hover, a:focus {
   color: #f14848;
 }
 
-.button{
-
-}
-
 .red-button:link,
 .red-button:visited {
   display: inline-block;
@@ -115,6 +111,10 @@ a:hover, a:focus {
 
 }
 
+.main div{
+  transform: scale(1.4);
+}
+
 .why {
   height: 28.99vw;
   display: inline-block;
@@ -125,6 +125,7 @@ a:hover, a:focus {
 .why-content {
   display: inline-block;
   padding-top: 5%;
+  transform: scale(1.5);
 }
 
 .why-content p {
@@ -141,6 +142,8 @@ a:hover, a:focus {
 .why-content .red-button {
   width: 30%;
   height: 30%;
+  padding: 6px;
+  margin-top: 3%;
 }
 
 .figure-section, .figure-section h3, .figure-section p {
@@ -168,34 +171,37 @@ a:hover, a:focus {
   color: #606060;
   font-weight: 300;
   display: block;
-  padding-bottom: 10px;
+  padding: 1.5% 0;
+  font-size: 2.5rem;
+  text-transform: uppercase;
 }
 
 .middle figure {
   display: none;
   position: absolute;
-
+  margin: 0;
+  top: 0;
+  right: -7%;
 }
 
-.figure-section .left, .figure-section .middle, .figure-section .right {
+.figure-section .left, .figure-section .middle {
   display: inline-block;
-  flex-grow: 1;
 }
 
 .figure-section .middle {
-  padding-left: 2%;
   width: 50%;
   position: relative;
+  height: 74%;
 }
 
 .figure-section .left {
   text-align: left;
-  width: 30%;
-  padding: 0 2%;
+  width: 40%;
+  padding: 0 10%;
 }
 
 .figure-section .left h3 {
-  font-size: 2rem;
+  font-size: 3.3rem;
   font-weight: 300;
   padding: 10%;
   text-transform: uppercase;
@@ -204,41 +210,59 @@ a:hover, a:focus {
 .figure-section .left p {
   padding: 10%;
   padding-top: 0;
+  font-size: 1.8rem;
+  font-weight: 300;
 }
 
-[type="radio"], [type="checkbox"] {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+figcaption{
+  text-align: center;
+  padding-bottom: 3%;
+  font-weight: 300;
 }
 
-input[type=radio]:checked + figure {
-  position: absolute;
-  display: inline-block;
-  right: -30%;
-  bottom: -50%;
-}
+/*[type="radio"], [type="checkbox"] {*/
+  /*border: 0;*/
+  /*clip: rect(0 0 0 0);*/
+  /*height: 1px;*/
+  /*margin: -1px;*/
+  /*overflow: hidden;*/
+  /*padding: 0;*/
+  /*position: absolute;*/
+  /*width: 1px;*/
+/*}*/
 
-input[type=radio]:checked + label .checked {
-  color: #f14848;
-}
+/*input[type=radio]:checked + figure {*/
+  /*position: absolute;*/
+  /*display: inline-block;*/
+  /*right: -30%;*/
+  /*bottom: -50%;*/
+/*}*/
 
-/*.figure-section label:hover ~ figure {
+/*input[type=radio]:checked + label .checked {*/
+  /*color: #f14848;*/
+/*}*/
+
+.figure-section label:hover ~ figure, .figure-section .checked > figure {
     position: absolute;
     display: inline-block;
-    right: -342px;
-    bottom: -150px;
     z-index: 50;
 }
 
 .figure-section label:hover, .figure-section label::selection{
     color: #f14848;
-}*/
+}
+
+.figure-section label:hover ~ .video {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: -200px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -100;
+  opacity: 0.5;
+}
 
 .split {
   display: inline-block;
