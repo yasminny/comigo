@@ -767,13 +767,6 @@ input[type=radio]:checked + label .checked {
     clear: both;
   }
 
-  .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: none;
-  }
-
   .menu-link {
     float: right;
     position: relative;
@@ -791,74 +784,10 @@ input[type=radio]:checked + label .checked {
     float: right;
   }
 
-  .top-nav ul li ul {
-    transform: translateY(-500px);
-    opacity: 0;
-    transition-property: transform, opacity;
-    transition-duration: 500ms;
-    transition-timing-function: ease-out;
-  }
-
-  .top-nav ul li:hover > ul {
-    display: inline-block;
-    transform: translateY(0);
-    height: 148px;
-    z-index: -20;
-    opacity: 0.98;
-  }
-
-  .top-nav ul, .top-nav {
-    display: inline-block;
-    float: right;
-  }
-
-  .top-nav li {
-    float: left;
-  }
-
   .top-nav a:active,
   .top-nav #selected {
     font-weight: bold;
     color: #f14848;
-  }
-
-  .top-nav ul ul {
-    position: absolute;
-    top: 66px;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    opacity: 0.98;
-  }
-
-  .top-nav ul ul ul {
-    position: absolute;
-    top: 148px;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    opacity: 0.98;
-  }
-
-  .top-nav ul ul li {
-    width: 33.333333%;
-    float: left;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    height: 148px;
-    line-height: 148px;
-  }
-
-  .top-nav ul ul ul li {
-    width: 50%;
-    float: left;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 2.5rem;
-    height: 148px;
-    line-height: 148px;
-    word-spacing: 0%;
   }
 
   .inside-menu:link, .inside-menu:visited, .figure-section h4 {
@@ -878,6 +807,95 @@ input[type=radio]:checked + label .checked {
     font-weight: 300;
     line-height: 148px;
     display: block;
+  }
+
+  .top-nav li {
+    float: left;
+  }
+
+  .top-nav ul, .top-nav {
+    display: inline-block;
+    float: right;
+  }
+
+  .top-nav ul ul li {
+    width: 33.333333%;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    /*height: 148px;*/
+    line-height: 148px;
+    height: 0;
+    opacity: 0;
+    transition-property: height, opacity;
+    transition-duration: 500ms, 500ms;
+    transition-timing-function: ease-out, ease-out;
+  }
+
+  .top-nav ul ul ul li {
+    width: 50%;
+    float: left;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    /*height: 148px;*/
+    line-height: 148px;
+    word-spacing: 0;
+    height: 0;
+    opacity: 0;
+    transition-property: height, opacity;
+    transition-duration: 500ms, 500ms;
+    transition-timing-function: ease-out, ease-out;
+  }
+
+  .top-nav>ul>li{
+    display: inline-block;
+  }
+
+  .top-nav li>ul {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition-property: height, opacity;
+    transition-duration: 500ms, 500ms;
+    transition-timing-function: ease-out, ease-out;
+  }
+
+  .top-nav li:hover > ul {
+    display: inline-block;
+    /*transform: translateY(0);*/
+    height: 148px;
+    z-index: -200;
+    opacity: 0.98;
+    overflow: visible;
+  }
+
+  .top-nav li:hover > ul > li {
+    display: inline-block;
+    /*transform: translateY(0);*/
+    height: 148px;
+    z-index: -200;
+    opacity: 0.98;
+    overflow: visible;
+  }
+
+  .top-nav ul ul {
+    position: absolute;
+    top: 66px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    opacity: 0.98;
+  }
+
+  .top-nav ul ul ul {
+    position: absolute;
+    top: 148px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    opacity: 0.98;
   }
 
   .inside-menu span {
