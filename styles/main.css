@@ -155,6 +155,7 @@ a:hover, a:focus {
 .figure-section {
   height: 39.99vw;
   line-height: 39.99vw;
+  overflow: hidden;
 }
 
 .figure-section p {
@@ -220,16 +221,16 @@ figcaption{
   font-weight: 300;
 }
 
-/*[type="radio"], [type="checkbox"] {*/
-  /*border: 0;*/
-  /*clip: rect(0 0 0 0);*/
-  /*height: 1px;*/
-  /*margin: -1px;*/
-  /*overflow: hidden;*/
-  /*padding: 0;*/
-  /*position: absolute;*/
-  /*width: 1px;*/
-/*}*/
+[type="radio"], [type="checkbox"] {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
 
 /*input[type=radio]:checked + figure {*/
   /*position: absolute;*/
@@ -252,16 +253,21 @@ figcaption{
     color: #f14848;
 }
 
-.figure-section label:hover ~ .video {
+figure .vid{
   position: absolute;
-  height: 100%;
-  width: 100%;
-  top: -200px;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  left: -280%;
+  top: -15.8%;
+  height: 40.1vw;
+  width: 1750px;
+}
+
+.figure-section label:hover ~ figure div .video {
+  position: absolute;
+  object-fit: fill;
   z-index: -100;
-  opacity: 0.5;
+  opacity: 0.3;
+  transform: scale(3);
+  right: 28%;
 }
 
 .split {
