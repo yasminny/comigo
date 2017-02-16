@@ -183,6 +183,7 @@ a:hover, a:focus {
   margin: 0;
   top: 0;
   right: -7%;
+  z-index: 50;
 }
 
 .figure-section .left, .figure-section .middle {
@@ -243,11 +244,9 @@ figcaption{
   /*color: #f14848;*/
 /*}*/
 
-.figure-section label:hover ~ figure, .figure-section .checked > figure {
-    position: absolute;
+.figure-section label:hover ~ figure {
     display: inline-block;
-    z-index: 50;
-}
+    }
 
 .figure-section label:hover, .figure-section label::selection{
     color: #f14848;
@@ -261,13 +260,23 @@ figure .vid{
   width: 1750px;
 }
 
-.figure-section label:hover ~ figure div .video {
+figure .vid .video {
   position: absolute;
   object-fit: fill;
   z-index: -100;
-  opacity: 0.3;
-  transform: scale(3);
+  opacity: 0;
+  transform: scale(4);
   right: 28%;
+  transition: opacity 2s ease-in;
+}
+
+.figure-section label:hover ~ figure div .video {
+  /*position: absolute;*/
+  /*object-fit: fill;*/
+  /*z-index: -100;*/
+  opacity: 0.3;
+  /*transform: scale(4);*/
+  /*right: 28%;*/
 }
 
 .split {
