@@ -100,6 +100,7 @@ a:hover, a:focus {
   text-align: center;
   background-size: cover;
   padding-top: 10%;
+  overflow: hidden;
 }
 
 .main h1, .main h2 {
@@ -175,6 +176,8 @@ a:hover, a:focus {
   padding: 1.5% 0;
   font-size: 2.5rem;
   text-transform: uppercase;
+  position: relative;
+  z-index: 90;
 }
 
 .middle figure {
@@ -244,15 +247,21 @@ figcaption{
   /*color: #f14848;*/
 /*}*/
 
+.figure-section li:last-child figure,
 .figure-section label:hover ~ figure {
-    display: inline-block;
-    }
+  display: inline-block;
+}
 
-.figure-section label:hover, .figure-section label::selection{
+.figure-section li:hover ~ li figure {
+  display: none;
+}
+
+.figure-section label:hover,
+.figure-section label::selection {
     color: #f14848;
 }
 
-figure .vid{
+figure .vid {
   position: absolute;
   left: -280%;
   top: -15.8%;
@@ -270,13 +279,9 @@ figure .vid .video {
   transition: opacity 2s ease-in;
 }
 
+.figure-section li:last-child figure .vid .video,
 .figure-section label:hover ~ figure div .video {
-  /*position: absolute;*/
-  /*object-fit: fill;*/
-  /*z-index: -100;*/
   opacity: 0.3;
-  /*transform: scale(4);*/
-  /*right: 28%;*/
 }
 
 .split {
@@ -319,7 +324,7 @@ figure .vid .video {
   background: url("../assets/other/ic_EI_cloud_2_home_page.png"), url("../assets/other/home-tv-service-bg1.png");
   background-repeat: no-repeat;
   background-size: 50%, cover;
-  background-position: 30% 20%, center;
+  background-position: 40% 20%, center;
   height: 41vw;
 
 }
@@ -954,7 +959,7 @@ figure .vid .video {
     display: inline-block;
     width: 100%;
     vertical-align: middle;
-    padding-left: 10px;
+    padding-left: 25px;
   }
 
   .top-nav .layer-one {
