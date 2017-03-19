@@ -72,7 +72,7 @@ a:hover, a:focus {
   margin: 5px 5px;
   line-height: 30px;
   letter-spacing: 0.1em;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
   transform: translateY(0);
   box-shadow: none;
   transition: all 150ms ease-in-out;
@@ -85,7 +85,7 @@ a:hover, a:focus {
   padding: 5px 5px;
   line-height: 30px;
   letter-spacing: 0.1em;
-  font-size: 0.75rem;
+  font-size: 0.85rem;
 }
 
 .white-button:hover, .red-button:hover {
@@ -108,13 +108,19 @@ a:hover, a:focus {
 }
 
 .main .red-button {
-  padding: 0.25% 2%;
+  padding: 0.35% 1.5%;
 
 }
 
 .main div{
   transform: scale(1.4);
+  padding-top: 20px;
 }
+
+.main > div > h2{
+  margin-bottom: 1.3%;
+}
+
 
 .why {
   height: 28.99vw;
@@ -299,19 +305,20 @@ figure .vid .video {
 .red-side-img {
   display: inline-block;
   width: 45%;
-  margin-left: 15%;
+  margin-left: 21%;
   margin-top: 50%;
 }
 
 .red-side-img h3 {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 .red-side-img p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
   padding-bottom: 5%;
+  font-weight: 300;
 }
 
 .red-side-img .white-button {
@@ -332,6 +339,11 @@ figure .vid .video {
 .split .red-side h3, .split .red-side p {
   color: white;
 }
+.red-side-img > a.white-button{
+  font-size: 1.2rem;
+  border-radius: 30px;
+  padding: 3% 7%;
+}
 
 .split .white-side {
   background-image: url("../assets/other/ic-stb-screens.png"), url("../assets/other/home-tv-service-bg2.png");
@@ -343,27 +355,31 @@ figure .vid .video {
 
 .white-side-img {
   display: inline-block;
-  width: 80%;
+  width: 75%;
   margin-left: 8%;
   margin-top: 50%;
 }
 
 .white-side-img h3 {
   text-transform: uppercase;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
 }
 
 .white-side-img p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
   padding-bottom: 2%;
+  font-weight: 300;
 }
 
 .white-side-img .red-button {
   display: inline-block;
-  padding: 2% 5%;
   text-transform: uppercase;
   margin: 0;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  padding: 2% 7%;
+  margin-top: 6px;
 }
 
 .tv {
@@ -372,19 +388,52 @@ figure .vid .video {
   line-height: 48.99vw;
 }
 
-.tv div {
+.tv .tv-text {
   display: inline-block;
   line-height: 1;
   vertical-align: middle;
-  width: 20%;
-  height: 50%;
+  width: 35%;
+  height: 75%;
   margin: 0 5%;
 }
 
-.tv img {
+.tv-text > h3{
+  padding-left: 101px;
+  font-size: 4.5rem;
+  text-transform: uppercase;
+}
+
+.tv-text > p{
+  padding-top: 19px;
+  padding-left: 101px;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+
+.tv-text > p > span{
+  font-weight: 300;
+  font-size: small;
+}
+
+.tv-text > a.red-button{
+  font-size: 1.2rem;
+  border-radius: 30px;
+  padding: 2.5% 7%;
+  margin-top: 6px;
+  margin-left: 101px;
+  text-transform: uppercase;
+}
+
+.tv-pic{
   width: 53vw;
   float: right;
-  padding-top: 4%;
+  padding-top: 2.6%;
+  overflow: hidden;
+}
+
+.tv img {
+  width: 60vw;
 }
 
 .floats {
@@ -435,7 +484,7 @@ figure .vid .video {
   height: 100%;
   float: left;
   text-transform: uppercase;
-  font-size: 3.5rem;
+  font-size: 5.3rem;
   padding-top: 12%;
   padding-left: 5%;
   font-weight: 300;
